@@ -22,7 +22,7 @@ jobs:
 
             - name: Smoke test (boot U-Boot in QEMU)
               run: |
-                qemu-system-arm -M virt -nographic -kernel u-boot/u-boot | head -n 40
+                timeout 20s qemu-system-arm -M virt -nographic -kernel u-boot/u-boot | head -n 40
       
 
 
