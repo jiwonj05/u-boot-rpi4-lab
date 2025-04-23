@@ -18,7 +18,7 @@ jobs:
               run: |
                 cd u-boot
                 make qemu_arm_defconfig
-                make -j$(nproc) CROSS_COMPILE=arm-none-eabi-
+                make u-boot -j$(nproc) CROSS_COMPILE=arm-none-eabi-
 
             - name: Smoke test (boot U-Boot in QEMU)
               run: |
