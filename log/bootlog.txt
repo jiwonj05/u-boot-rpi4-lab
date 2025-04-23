@@ -1,0 +1,85 @@
+Bloblist at 0 not found (err=-2)
+alloc space exhausted ptr 400 limit 0
+Bloblist at 0 not found (err=-2)
+
+
+U-Boot 2025.04-01239-g4446bc331c65 (Apr 22 2025 - 19:20:39 -0700)
+
+DRAM:  128 MiB
+using memory 0x46697000-0x476d7000 for malloc()
+Core:  51 devices, 14 uclasses, devicetree: board
+Flash: 64 MiB
+Loading Environment from Flash... *** Warning - bad CRC, using default environment
+
+In:    serial,usbkbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+No USB controllers found
+Net:   No ethernet found.
+[?25h
+starting USB...
+No USB controllers found
+Hit any key to stop autoboot:  2  1  0 
+Scanning for bootflows in all bootdevs
+Seq  Method       State   Uclass    Part  Name                      Filename
+---  -----------  ------  --------  ----  ------------------------  ----------------
+Scanning global bootmeth 'efi_mgr':
+7[r[999;999H[6n8Cannot persist EFI variables without system partition
+Missing TPMv2 device for EFI_TCG_PROTOCOL
+Missing RNG device for EFI_RNG_PROTOCOL
+Scanning bootdev 'fw-cfg@9020000.bootdev':
+fatal: no kernel available
+No USB controllers found
+scanning bus for devices...
+No more bootdevs
+---  -----------  ------  --------  ----  ------------------------  ----------------
+(0 bootflows, 0 valid)
+=> 
+=> setenv bootdelay 0
+=> saveenv
+Saving Environment to Flash... Un-Protected 2 sectors
+Erasing Flash...
+.. done
+Erased 2 sectors
+Writing to Flash... done
+Protected 2 sectors
+OK
+=> reset
+resetting ...
+Bloblist at 0 not found (err=-2)
+alloc space exhausted ptr 400 limit 0
+Bloblist at 0 not found (err=-2)
+
+
+U-Boot 2025.04-01239-g4446bc331c65 (Apr 22 2025 - 19:20:39 -0700)
+
+DRAM:  128 MiB
+using memory 0x46697000-0x476d7000 for malloc()
+Core:  51 devices, 14 uclasses, devicetree: board
+Flash: 64 MiB
+Loading Environment from Flash... OK
+In:    serial,usbkbd
+Out:   serial,vidconsole
+Err:   serial,vidconsole
+No USB controllers found
+Net:   No ethernet found.
+[?25h
+starting USB...
+No USB controllers found
+Hit any key to stop autoboot:  0 
+Scanning for bootflows in all bootdevs
+Seq  Method       State   Uclass    Part  Name                      Filename
+---  -----------  ------  --------  ----  ------------------------  ----------------
+Scanning global bootmeth 'efi_mgr':
+7[r[999;999H[6n8Cannot persist EFI variables without system partition
+Missing TPMv2 device for EFI_TCG_PROTOCOL
+Missing RNG device for EFI_RNG_PROTOCOL
+Scanning bootdev 'fw-cfg@9020000.bootdev':
+fatal: no kernel available
+No USB controllers found
+scanning bus for devices...
+No more bootdevs
+---  -----------  ------  --------  ----  ------------------------  ----------------
+(0 bootflows, 0 valid)
+=> kkk   x xxxx    QEMU: Terminated
+
