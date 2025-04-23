@@ -1,0 +1,26 @@
+name: U-Boot CI Smoke Test
+
+on: [push, pull_request]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Install dependencies
+              run: sudo apt update && sudo apt install -y gcc-arm-none-eabi qemu-system-arm make bc bison flex libssl-dev
+            
+            - name: Build U-Boot for QEMU
+              run: |
+                cd u-boot
+                make qemu_arm_defconfig
+                make -j$(nproc) CROSS_COMPILE=arm-none-eabi-
+
+            - name: Smoke test (boot U-Boot in QEMU)
+              run: |
+                qemu-system-arm -M virt -nographic -kernel u-boot/u-boot | head -n 40
+      
+
+
